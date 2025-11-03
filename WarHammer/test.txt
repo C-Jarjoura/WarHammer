@@ -1,0 +1,3 @@
+Ajouter cible a attaquer lors de l'attaque (attaque tout le monde pour l'instant)
+ajouter obstacles 
+spawn aléatoires des personnages

@@ -1,4 +1,4 @@
-﻿#include "Grille.h"
+﻿#include "grille.h"
 #include <iostream>
 #include <thread>
 #include <chrono>
@@ -165,7 +165,7 @@ void Grille::animationTir(const Astartes& tireur,
 }
 
 // === Animation: melee (impact sur la cible) ===
-void Grille::animationCac(const Astartes& attaquant,
+void Grille::animationCac(const Personnage& attaquant,
     const Personnage& cible,
     vector<Astartes>& escouade,
     vector<Demon>& demons) {

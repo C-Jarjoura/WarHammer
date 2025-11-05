@@ -44,7 +44,7 @@ public:
         std::vector<Astartes>& escouade,
         std::vector<Demon>& demons);
 
-    void animationCac(const Astartes& attaquant,
+    void animationCac(const Personnage& attaquant,
         const Personnage& cible,
         std::vector<Astartes>& escouade,
         std::vector<Demon>& demons);

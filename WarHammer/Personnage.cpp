@@ -82,7 +82,7 @@ void Personnage::attack(Personnage& target) {
     int touches = Des::lancer(arme.getAtk(), arme.getHit(), arme.getNom());
 
     // Jets de defense
-    int saves = Des::lancer(target.getDef(), 4, "Sauvegarde");
+    int saves = Des::lancer(touches, target.getDef(), "Sauvegarde");
 
     int netHits = max(0, touches - saves);
     int damage = netHits * arme.getDmg();

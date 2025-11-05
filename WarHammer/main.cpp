@@ -1,6 +1,6 @@
 ﻿#include "Astartes.h"
 #include "Demon.h"
-#include "Grille.h"
+#include "grille.h"
 #include <iostream>
 #include <vector>
 #include <cstdlib>
@@ -210,7 +210,7 @@ int main() {
                     continue;
                 }
 
-                int coutAP = (arme.getPortee() > 1) ? 2 : 1;
+                int coutAP = arme.getCoutAP();
                 if (apJoueur < coutAP) {
                     cout << RED << "Pas assez d'AP (" << coutAP << " requis).\n" << RESET;
                     continue;
@@ -253,7 +253,7 @@ int main() {
                     << "] avance vers " << cible->getSymbole() << "." << RESET << "\n";
             }
             else {
-                g.animationCac(escouade[0], *cible, escouade, demons);
+                g.animationCac(d, *cible, escouade, demons);
                 cout << RED << "Le demon [" << d.getSymbole()
                     << "] attaque " << cible->getSymbole() << " !" << RESET << "\n";
                 d.attack(*cible);
